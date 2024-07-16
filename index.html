@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+
+
   <title>Salary Calculator</title>
 </head>
 <body>
@@ -11,27 +13,40 @@
   </header>
   <main>
     <h2>Add Employee</h2>
-    <button data-testid="submitButton"> 
-      Submit
-    </button>
+    <form id="employeeForm">   
+      <p>
+        <input type="text" id="firstName" data-testid="firstNameInput" name="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" data-testid="lastNameInput" name="lastName" placeholder="Last Name" required>
+        <input type="text" id="id" data-testid="idInput" name="id" placeholder="ID" required>
+        <input type="text" id="title" data-testid="titleInput" name="title" placeholder="Title" required>
+        <input type="number" id="annualSalary" data-testid="annualSalaryInput" name="annualSalary" placeholder="Annual Salary" required>
+        <button type="submit" data-testid="submitButton">Submit</button>
+      </p>
+    </form>
     <h2>Employees</h2>
-    <table> 
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>ID Number</th>
-        <th>Job Title</th>
-        <th>Annual Salary</th>
-      </tr>
-      <tr>
-        
-      </tr>
+    <table id="employeeTable">
+      <!-- <thead> -->
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID Number</th>
+          <th>Job Title</th>
+          <th>Annual Salary</th>
+          <th>Actions</th>
+        </tr>
+      
+      <tbody>
+        <!-- This tag is to add new employee tabke -->
+
+      </tbody
     </table>
-    <script src="script.js"></script>
   </main>
-  <footer>
-    <p>Total Monthly</p>
-  </footer>
-  
+  <script src="script.js"></script>
 </body>
+<footer> 
+
+    <p> Total Monthly Salary Goal: $20,000</p>
+    <p>Total Monthly Salary: <span id="totalMonthlyCost">$0.00</span> </p> 
+    <p id="budgetStatus"></p>
+  </footer>
 </html>
