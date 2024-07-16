@@ -1,6 +1,3 @@
-// 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-// 🔥 DO NOT MODIFY THIS FILE!!!!! 🔥
-// 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
 const { fireEvent, getByText, queryByText, getByTestId, configure } = require('@testing-library/dom')
 require('@testing-library/jest-dom')
@@ -212,14 +209,5 @@ describe(`Weekend Salary Calculator:`, () => {
     expect(getByText(table, /72007|72,007/)).toBeInTheDocument()
   })
 
-  // TODO Stretch Tests:
-    // Total monthly salary is correctly calculated after deleting an employee.
-    // Check for rounding logic.
-        // 24001.583 becomes 24001.58
-    // Check for money formatting:
-        // 24001 becomes $24,001.00
-        // 24001.583 becomes $24,000.58
-    // A new employee is not added to the DOM if:
-        // An input was not provided text
-        // A duplicate id value was provided
+  
 })

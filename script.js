@@ -94,5 +94,15 @@ function updateTotalMonthlyCost(updatedMonthlySalary) {
 
     totalCostElement.textContent = `$${totalMonthlySalary.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
+    const budgetStatusElement = document.getElementById('budgetStatus');
+    if (totalMonthlySalary > 20000) {
+        document.querySelector('footer').classList.add('over-budget');
+        budgetStatusElement.textContent = "Over Budget!";
+        console.log("Over Budget");
+    } else {
+        document.querySelector('footer').classList.remove('over-budget');
+        budgetStatusElement.textContent = "meets budget goals";
+
+     
     }
 }
