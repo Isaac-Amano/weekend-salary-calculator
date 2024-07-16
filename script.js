@@ -80,14 +80,7 @@ function updateTotalMonthlyCost(updatedMonthlySalary) {
     // parseFloat handles numbers with decimal points, making it suitable for financial calculations where precision is important.
     // when I didn't use parseFloat, it gave me weird decimal points on the totalMonthlyCost.
 
-    // totalCostElement.textContent
-    // This part gets the current text inside the totalMonthlyCost element.
-    // example the current text is "$15,000.00".
-
-    // This part removes the dollar sign ($) and commas (,) from the text.
-    // .replace(/[$,]/g, '') is a method that replaces all symbols of $ and , with nothing (or it removes them).
-    // After this step, "$15,000.00" becomes "15000.00".
-
+    
     totalMonthlySalary += updatedMonthlySalary;
 
     console.log("Updated Total Cost: ", totalMonthlySalary);
